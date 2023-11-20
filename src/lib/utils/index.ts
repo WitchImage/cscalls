@@ -1,0 +1,1 @@
+export { outfitFont } from './fonts';
