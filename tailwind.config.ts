@@ -3,27 +3,35 @@ import type { Config } from 'tailwindcss';
 const config: Config = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/common/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/features/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-        colors: {
-            primary: {
-                DEFAULT: '#e38617',
-                500: '#e38617',
-                800: '#d36611',
-            },
-            secondary: {
-                DEFAULT: '#2364DB',
-                500: '#2364DB',
-                800: '#17418F',
-            },
+        borderRadius: {
+            sm: 'var(--radius-sm)',
+            md: 'var(--radius-md)',
+            lg: 'var(--radius-lg)',
+            full: 'var(--radius-full)',
         },
         extend: {
-            backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic':
-                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            transitionProperty: {
+                transform: 'transform',
+            },
+            colors: {
+                primary: {
+                    DEFAULT: 'var(--primary-color)',
+                    500: 'var(--primary-color)',
+                    800: 'var(--primary-color-800)',
+                },
+                secondary: {
+                    DEFAULT: 'var(--secondary-color)',
+                    500: 'var(--secondary-color)',
+                    800: 'var(--secondary-color-800)',
+                },
+            },
+            boxShadow: {
+                full: '0px 0px 50px var(--primary-color)',
             },
         },
     },
