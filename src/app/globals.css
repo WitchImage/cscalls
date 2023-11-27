@@ -33,6 +33,12 @@
     }
 }
 
+@layer utilities {
+    .primitive-field {
+        @apply rounded-sm py-2 px-4;
+    }
+}
+
 body {
     color: var(--foreground-color);
     background: var(--background-start-color)
